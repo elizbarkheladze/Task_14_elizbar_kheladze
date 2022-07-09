@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="bottomView" id="iN0-l3-epB" customClass="bottomView" customModule="Task_14_elizbar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="are you sure you want to sign out ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-3f-o0o">
+                    <rect key="frame" x="0.0" y="10" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfQ-TL-b4X">
+                    <rect key="frame" x="0.0" y="44" width="192" height="106"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="yes">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signOut:" destination="iN0-l3-epB" eventType="touchUpInside" id="KJ0-cd-HWI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Se-Z9-35f">
+                    <rect key="frame" x="222" y="44" width="192" height="106"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="no">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="selfDismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="3rH-O1-jYE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZfQ-TL-b4X" secondAttribute="bottom" id="69I-AG-eCx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Se-Z9-35f" secondAttribute="trailing" id="Ech-QY-iQ2"/>
+                <constraint firstItem="ZfQ-TL-b4X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NYE-wU-Yzc"/>
+                <constraint firstItem="1Se-Z9-35f" firstAttribute="width" secondItem="ZfQ-TL-b4X" secondAttribute="width" id="S0c-VR-7eD"/>
+                <constraint firstItem="1Se-Z9-35f" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TtB-oV-NGP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Se-Z9-35f" secondAttribute="bottom" id="d8u-96-Dhh"/>
+                <constraint firstItem="ZfQ-TL-b4X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hI4-L3-Hn1"/>
+                <constraint firstItem="nmX-3f-o0o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="kQ6-C0-iBw"/>
+                <constraint firstItem="ZfQ-TL-b4X" firstAttribute="top" secondItem="nmX-3f-o0o" secondAttribute="bottom" id="moH-OM-NdO"/>
+                <constraint firstItem="1Se-Z9-35f" firstAttribute="leading" secondItem="ZfQ-TL-b4X" secondAttribute="trailing" constant="30" id="sLL-Ch-ySa"/>
+                <constraint firstAttribute="trailing" secondItem="nmX-3f-o0o" secondAttribute="trailing" id="tc7-zL-dM8"/>
+                <constraint firstItem="nmX-3f-o0o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u4a-Vn-nnY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

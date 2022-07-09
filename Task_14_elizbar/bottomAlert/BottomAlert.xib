@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BottomAlert" id="3fZ-9L-Aza" customClass="BottomAlert" customModule="Task_14_elizbar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNF-Gp-TTi">
+                    <rect key="frame" x="0.0" y="10" width="414" height="34"/>
+                    <attributedString key="attributedText">
+                        <fragment content="are you sure you want to sign out ?">
+                            <attributes>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L29-Z4-5fy">
+                    <rect key="frame" x="0.0" y="44" width="192" height="106"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="yes">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signOut:" destination="3fZ-9L-Aza" eventType="touchUpInside" id="zs8-le-bsS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-IB-E1p">
+                    <rect key="frame" x="222" y="44" width="192" height="106"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="no">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="selfDismiss:" destination="3fZ-9L-Aza" eventType="touchUpInside" id="0SF-yU-HwX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="uux-5l-xcA"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wNF-Gp-TTi" firstAttribute="leading" secondItem="3fZ-9L-Aza" secondAttribute="leading" id="5Ft-uT-Nd0"/>
+                <constraint firstItem="XYQ-IB-E1p" firstAttribute="top" secondItem="uux-5l-xcA" secondAttribute="top" id="DM3-KZ-cxR"/>
+                <constraint firstAttribute="trailing" secondItem="wNF-Gp-TTi" secondAttribute="trailing" id="F9i-zc-CIb"/>
+                <constraint firstItem="L29-Z4-5fy" firstAttribute="leading" secondItem="uux-5l-xcA" secondAttribute="leading" id="Ixl-Gl-fiH"/>
+                <constraint firstItem="L29-Z4-5fy" firstAttribute="top" secondItem="wNF-Gp-TTi" secondAttribute="bottom" id="Jmh-a0-kZC"/>
+                <constraint firstItem="uux-5l-xcA" firstAttribute="trailing" secondItem="XYQ-IB-E1p" secondAttribute="trailing" id="Ntm-Xq-HO7"/>
+                <constraint firstItem="wNF-Gp-TTi" firstAttribute="top" secondItem="3fZ-9L-Aza" secondAttribute="top" constant="10" id="QuB-mv-jAN"/>
+                <constraint firstItem="uux-5l-xcA" firstAttribute="bottom" secondItem="L29-Z4-5fy" secondAttribute="bottom" id="TPV-Ts-ahA"/>
+                <constraint firstItem="L29-Z4-5fy" firstAttribute="top" secondItem="uux-5l-xcA" secondAttribute="top" id="VjK-19-cfn"/>
+                <constraint firstItem="uux-5l-xcA" firstAttribute="bottom" secondItem="XYQ-IB-E1p" secondAttribute="bottom" id="d6h-Rs-Y1D"/>
+                <constraint firstItem="XYQ-IB-E1p" firstAttribute="width" secondItem="L29-Z4-5fy" secondAttribute="width" id="ecU-5e-wFX"/>
+                <constraint firstItem="XYQ-IB-E1p" firstAttribute="leading" secondItem="L29-Z4-5fy" secondAttribute="trailing" constant="30" id="mVQ-E8-139"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
